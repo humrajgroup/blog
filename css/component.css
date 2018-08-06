@@ -1,29 +1,21 @@
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot');
-	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.woff') format('woff'),
-		url('../fonts/icomoon.ttf') format('truetype'),
-		url('../fonts/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+
 
 /* Common styles of menus */
 
 .dl-menuwrapper {
 	width: 100%;
-	max-width: 300px;
+	/* max-width: 300px; */
 	float: left;
 	position: relative;
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
 	-webkit-perspective-origin: 50% 200%;
 	perspective-origin: 50% 200%;
+	background-color: #734782;
 }
 
 .dl-menuwrapper:first-child {
-	margin-right: 100px;
+	/* margin-right: 100px; */
 }
 
 .dl-menuwrapper button {
@@ -93,10 +85,10 @@
 	position: absolute;
 	top: 0;
 	line-height: 50px;
-	font-family: 'icomoon';
+	
 	speak: none;
 	-webkit-font-smoothing: antialiased;
-	content: "\e000";
+	
 }
 
 .dl-menuwrapper li.dl-back:after {
@@ -132,6 +124,7 @@
 	pointer-events: auto;
 	-webkit-transform: translateY(0px);
 	transform: translateY(0px);
+	width: 300px;
 }
 
 /* Hide the inner submenus */
@@ -171,68 +164,10 @@ All this is done for any sub-level being entered.
 
 /* Animation classes for moving out and in */
 
-.dl-menu.dl-animate-out-1 {
-	-webkit-animation: MenuAnimOut1 0.4s;
-	animation: MenuAnimOut1 0.4s;
-}
-
-.dl-menu.dl-animate-out-2 {
-	-webkit-animation: MenuAnimOut2 0.3s ease-in-out;
-	animation: MenuAnimOut2 0.3s ease-in-out;
-}
-
-.dl-menu.dl-animate-out-3 {
-	-webkit-animation: MenuAnimOut3 0.4s ease;
-	animation: MenuAnimOut3 0.4s ease;
-}
-
-.dl-menu.dl-animate-out-4 {
-	-webkit-animation: MenuAnimOut4 0.4s ease;
-	animation: MenuAnimOut4 0.4s ease;
-}
 
 .dl-menu.dl-animate-out-5 {
 	-webkit-animation: MenuAnimOut5 0.4s ease;
 	animation: MenuAnimOut5 0.4s ease;
-}
-
-@-webkit-keyframes MenuAnimOut1 {
-	0% { }
-	50% {
-		-webkit-transform: translateZ(-250px) rotateY(30deg);
-	}
-	75% {
-		-webkit-transform: translateZ(-372.5px) rotateY(15deg);
-		opacity: .5;
-	}
-	100% {
-		-webkit-transform: translateZ(-500px) rotateY(0deg);
-		opacity: 0;
-	}
-}
-
-@-webkit-keyframes MenuAnimOut2 {
-	0% { }
-	100% {
-		-webkit-transform: translateX(-100%);
-		opacity: 0;
-	}
-}
-
-@-webkit-keyframes MenuAnimOut3 {
-	0% { }
-	100% {
-		-webkit-transform: translateZ(300px);
-		opacity: 0;
-	}
-}
-
-@-webkit-keyframes MenuAnimOut4 {
-	0% { }
-	100% {
-		-webkit-transform: translateZ(-300px);
-		opacity: 0;
-	}
 }
 
 @-webkit-keyframes MenuAnimOut5 {
@@ -243,50 +178,6 @@ All this is done for any sub-level being entered.
 	}
 }
 
-@keyframes MenuAnimOut1 {
-	0% { }
-	50% {
-		-webkit-transform: translateZ(-250px) rotateY(30deg);
-		transform: translateZ(-250px) rotateY(30deg);
-	}
-	75% {
-		-webkit-transform: translateZ(-372.5px) rotateY(15deg);
-		transform: translateZ(-372.5px) rotateY(15deg);
-		opacity: .5;
-	}
-	100% {
-		-webkit-transform: translateZ(-500px) rotateY(0deg);
-		transform: translateZ(-500px) rotateY(0deg);
-		opacity: 0;
-	}
-}
-
-@keyframes MenuAnimOut2 {
-	0% { }
-	100% {
-		-webkit-transform: translateX(-100%);
-		transform: translateX(-100%);
-		opacity: 0;
-	}
-}
-
-@keyframes MenuAnimOut3 {
-	0% { }
-	100% {
-		-webkit-transform: translateZ(300px);
-		transform: translateZ(300px);
-		opacity: 0;
-	}
-}
-
-@keyframes MenuAnimOut4 {
-	0% { }
-	100% {
-		-webkit-transform: translateZ(-300px);
-		transform: translateZ(-300px);
-		opacity: 0;
-	}
-}
 
 @keyframes MenuAnimOut5 {
 	0% { }
@@ -297,77 +188,10 @@ All this is done for any sub-level being entered.
 	}
 }
 
-.dl-menu.dl-animate-in-1 {
-	-webkit-animation: MenuAnimIn1 0.3s;
-	animation: MenuAnimIn1 0.3s;
-}
-
-.dl-menu.dl-animate-in-2 {
-	-webkit-animation: MenuAnimIn2 0.3s ease-in-out;
-	animation: MenuAnimIn2 0.3s ease-in-out;
-}
-
-.dl-menu.dl-animate-in-3 {
-	-webkit-animation: MenuAnimIn3 0.4s ease;
-	animation: MenuAnimIn3 0.4s ease;
-}
-
-.dl-menu.dl-animate-in-4 {
-	-webkit-animation: MenuAnimIn4 0.4s ease;
-	animation: MenuAnimIn4 0.4s ease;
-}
 
 .dl-menu.dl-animate-in-5 {
 	-webkit-animation: MenuAnimIn5 0.4s ease;
 	animation: MenuAnimIn5 0.4s ease;
-}
-
-@-webkit-keyframes MenuAnimIn1 {
-	0% {
-		-webkit-transform: translateZ(-500px) rotateY(0deg);
-		opacity: 0;
-	}
-	20% {
-		-webkit-transform: translateZ(-250px) rotateY(30deg);
-		opacity: 0.5;
-	}
-	100% {
-		-webkit-transform: translateZ(0px) rotateY(0deg);
-		opacity: 1;
-	}
-}
-
-@-webkit-keyframes MenuAnimIn2 {
-	0% {
-		-webkit-transform: translateX(-100%);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateX(0px);
-		opacity: 1;
-	}
-}
-
-@-webkit-keyframes MenuAnimIn3 {
-	0% {
-		-webkit-transform: translateZ(300px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateZ(0px);
-		opacity: 1;
-	}
-}
-
-@-webkit-keyframes MenuAnimIn4 {
-	0% {
-		-webkit-transform: translateZ(-300px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateZ(0px);
-		opacity: 1;
-	}
 }
 
 @-webkit-keyframes MenuAnimIn5 {
@@ -377,63 +201,6 @@ All this is done for any sub-level being entered.
 	}
 	100% {
 		-webkit-transform: translateY(0);
-		opacity: 1;
-	}
-}
-
-@keyframes MenuAnimIn1 {
-	0% {
-		-webkit-transform: translateZ(-500px) rotateY(0deg);
-		transform: translateZ(-500px) rotateY(0deg);
-		opacity: 0;
-	}
-	20% {
-		-webkit-transform: translateZ(-250px) rotateY(30deg);
-		transform: translateZ(-250px) rotateY(30deg);
-		opacity: 0.5;
-	}
-	100% {
-		-webkit-transform: translateZ(0px) rotateY(0deg);
-		transform: translateZ(0px) rotateY(0deg);
-		opacity: 1;
-	}
-}
-
-@keyframes MenuAnimIn2 {
-	0% {
-		-webkit-transform: translateX(-100%);
-		transform: translateX(-100%);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateX(0px);
-		transform: translateX(0px);
-		opacity: 1;
-	}
-}
-
-@keyframes MenuAnimIn3 {
-	0% {
-		-webkit-transform: translateZ(300px);
-		transform: translateZ(300px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateZ(0px);
-		transform: translateZ(0px);
-		opacity: 1;
-	}
-}
-
-@keyframes MenuAnimIn4 {
-	0% {
-		-webkit-transform: translateZ(-300px);
-		transform: translateZ(-300px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateZ(0px);
-		transform: translateZ(0px);
 		opacity: 1;
 	}
 }
@@ -451,73 +218,10 @@ All this is done for any sub-level being entered.
 	}
 }
 
-.dl-menuwrapper > .dl-submenu.dl-animate-in-1 {
-	-webkit-animation: SubMenuAnimIn1 0.4s ease;
-	animation: SubMenuAnimIn1 0.4s ease;
-}
-
-.dl-menuwrapper > .dl-submenu.dl-animate-in-2 {
-	-webkit-animation: SubMenuAnimIn2 0.3s ease-in-out;
-	animation: SubMenuAnimIn2 0.3s ease-in-out;
-}
-
-.dl-menuwrapper > .dl-submenu.dl-animate-in-3 {
-	-webkit-animation: SubMenuAnimIn3 0.4s ease;
-	animation: SubMenuAnimIn3 0.4s ease;
-}
-
-.dl-menuwrapper > .dl-submenu.dl-animate-in-4 {
-	-webkit-animation: SubMenuAnimIn4 0.4s ease;
-	animation: SubMenuAnimIn4 0.4s ease;
-}
 
 .dl-menuwrapper > .dl-submenu.dl-animate-in-5 {
 	-webkit-animation: SubMenuAnimIn5 0.4s ease;
 	animation: SubMenuAnimIn5 0.4s ease;
-}
-
-@-webkit-keyframes SubMenuAnimIn1 {
-	0% {
-		-webkit-transform: translateX(50%);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateX(0px);
-		opacity: 1;
-	}
-}
-
-@-webkit-keyframes SubMenuAnimIn2 {
-	0% {
-		-webkit-transform: translateX(100%);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateX(0px);
-		opacity: 1;
-	}
-}
-
-@-webkit-keyframes SubMenuAnimIn3 {
-	0% {
-		-webkit-transform: translateZ(-300px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateZ(0px);
-		opacity: 1;
-	}
-}
-
-@-webkit-keyframes SubMenuAnimIn4 {
-	0% {
-		-webkit-transform: translateZ(300px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateZ(0px);
-		opacity: 1;
-	}
 }
 
 @-webkit-keyframes SubMenuAnimIn5 {
@@ -531,57 +235,6 @@ All this is done for any sub-level being entered.
 	}
 }
 
-@keyframes SubMenuAnimIn1 {
-	0% {
-		-webkit-transform: translateX(50%);
-		transform: translateX(50%);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateX(0px);
-		transform: translateX(0px);
-		opacity: 1;
-	}
-}
-
-@keyframes SubMenuAnimIn2 {
-	0% {
-		-webkit-transform: translateX(100%);
-		transform: translateX(100%);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateX(0px);
-		transform: translateX(0px);
-		opacity: 1;
-	}
-}
-
-@keyframes SubMenuAnimIn3 {
-	0% {
-		-webkit-transform: translateZ(-300px);
-		transform: translateZ(-300px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateZ(0px);
-		transform: translateZ(0px);
-		opacity: 1;
-	}
-}
-
-@keyframes SubMenuAnimIn4 {
-	0% {
-		-webkit-transform: translateZ(300px);
-		transform: translateZ(300px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateZ(0px);
-		transform: translateZ(0px);
-		opacity: 1;
-	}
-}
 
 @keyframes SubMenuAnimIn5 {
 	0% {
@@ -596,74 +249,11 @@ All this is done for any sub-level being entered.
 	}
 }
 
-.dl-menuwrapper > .dl-submenu.dl-animate-out-1 {
-	-webkit-animation: SubMenuAnimOut1 0.4s ease;
-	animation: SubMenuAnimOut1 0.4s ease;
-}
-
-.dl-menuwrapper > .dl-submenu.dl-animate-out-2 {
-	-webkit-animation: SubMenuAnimOut2 0.3s ease-in-out;
-	animation: SubMenuAnimOut2 0.3s ease-in-out;
-}
-
-.dl-menuwrapper > .dl-submenu.dl-animate-out-3 {
-	-webkit-animation: SubMenuAnimOut3 0.4s ease;
-	animation: SubMenuAnimOut3 0.4s ease;
-}
-
-.dl-menuwrapper > .dl-submenu.dl-animate-out-4 {
-	-webkit-animation: SubMenuAnimOut4 0.4s ease;
-	animation: SubMenuAnimOut4 0.4s ease;
-}
-
 .dl-menuwrapper > .dl-submenu.dl-animate-out-5 {
 	-webkit-animation: SubMenuAnimOut5 0.4s ease;
 	animation: SubMenuAnimOut5 0.4s ease;
 }
 
-@-webkit-keyframes SubMenuAnimOut1 {
-	0% {
-		-webkit-transform: translateX(0%);
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: translateX(50%);
-		opacity: 0;
-	}
-}
-
-@-webkit-keyframes SubMenuAnimOut2 {
-	0% {
-		-webkit-transform: translateX(0%);
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: translateX(100%);
-		opacity: 0;
-	}
-}
-
-@-webkit-keyframes SubMenuAnimOut3 {
-	0% {
-		-webkit-transform: translateZ(0px);
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: translateZ(-300px);
-		opacity: 0;
-	}
-}
-
-@-webkit-keyframes SubMenuAnimOut4 {
-	0% {
-		-webkit-transform: translateZ(0px);
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: translateZ(300px);
-		opacity: 0;
-	}
-}
 
 @-webkit-keyframes SubMenuAnimOut5 {
 	0% {
@@ -676,57 +266,6 @@ All this is done for any sub-level being entered.
 	}
 }
 
-@keyframes SubMenuAnimOut1 {
-	0% {
-		-webkit-transform: translateX(0%);
-		transform: translateX(0%);
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: translateX(50%);
-		transform: translateX(50%);
-		opacity: 0;
-	}
-}
-
-@keyframes SubMenuAnimOut2 {
-	0% {
-		-webkit-transform: translateX(0%);
-		transform: translateX(0%);
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: translateX(100%);
-		transform: translateX(100%);
-		opacity: 0;
-	}
-}
-
-@keyframes SubMenuAnimOut3 {
-	0% {
-		-webkit-transform: translateZ(0px);
-		transform: translateZ(0px);
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: translateZ(-300px);
-		transform: translateZ(-300px);
-		opacity: 0;
-	}
-}
-
-@keyframes SubMenuAnimOut4 {
-	0% {
-		-webkit-transform: translateZ(0px);
-		transform: translateZ(0px);
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: translateZ(300px);
-		transform: translateZ(300px);
-		opacity: 0;
-	}
-}
 
 @keyframes SubMenuAnimOut5 {
 	0% {
@@ -765,51 +304,6 @@ All this is done for any sub-level being entered.
 	content: '';
 }
 
-/* Colors for demos */
-
-/* Demo 1 */
-.demo-1 .dl-menuwrapper button {
-	background: #c62860;
-}
-
-.demo-1 .dl-menuwrapper button:hover,
-.demo-1 .dl-menuwrapper button.dl-active,
-.demo-1 .dl-menuwrapper ul {
-	background: #9e1847;
-}
-
-/* Demo 2 */
-.demo-2 .dl-menuwrapper button {
-	background: #e86814;
-}
-
-.demo-2 .dl-menuwrapper button:hover,
-.demo-2 .dl-menuwrapper button.dl-active,
-.demo-2 .dl-menuwrapper ul {
-	background: #D35400;
-}
-
-/* Demo 3 */
-.demo-3 .dl-menuwrapper button {
-	background: #08cbc4;
-}
-
-.demo-3 .dl-menuwrapper button:hover,
-.demo-3 .dl-menuwrapper button.dl-active,
-.demo-3 .dl-menuwrapper ul {
-	background: #00b4ae;
-}
-
-/* Demo 4 */
-.demo-4 .dl-menuwrapper button {
-	background: #90b912;
-}
-
-.demo-4 .dl-menuwrapper button:hover,
-.demo-4 .dl-menuwrapper button.dl-active,
-.demo-4 .dl-menuwrapper ul {
-	background: #79a002;
-}
 
 /* Demo 5 */
 .demo-5 .dl-menuwrapper button {
@@ -820,4 +314,40 @@ All this is done for any sub-level being entered.
 .demo-5 .dl-menuwrapper button.dl-active,
 .demo-5 .dl-menuwrapper ul {
 	background: #643771;
+}
+.search {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    outline: none;
+}
+.search:hover {
+	background: rgba(255,248,213,0.1);
+}
+.searchbox {
+    background-color: rgb(254, 254, 254);
+    box-shadow: rgb(153, 153, 153) 2px 1px 4px inset;
+    width: 100%;
+    border-width: medium;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    font: 12px/12px HelveticaNeue, Helvetica, Arial, sans-serif;
+    padding: 4%;
+    border-radius: 9px;
+}
+.fa-right{
+	position: relative;
+    float: right;
+	padding-top: 2px;
+}
+.fa-left {
+    position: relative;
+    float: left;
+    padding-right: 20px;
+    padding-top: 2px;
 }

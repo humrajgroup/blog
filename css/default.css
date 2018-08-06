@@ -1,16 +1,7 @@
 /* General Demo Style */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
-@font-face {
-	font-family: 'fontawesome';
-	src:url('../fonts/fontawesome.eot');
-	src:url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/fontawesome.svg#fontawesome') format('svg'),
-		url('../fonts/fontawesome.woff') format('woff'),
-		url('../fonts/fontawesome.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
+
 
 body, html { font-size: 100%; 	padding: 0; margin: 0;}
 
@@ -54,20 +45,20 @@ a:hover {
 .container > header {
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 1.875em 3.125em 1.875em;
+	/* padding: 0 1.875em 3.125em 1.875em; */
 }
 
 .main {
-	max-width: 69em;
-	padding-top: 2em;
+	/* max-width: 69em; */
+	/* padding-top: 2em; */
 }
 
 .column {
 	float: left;
-	width: 50%;
-	padding: 0 2em;
+	width: 100%;
+	/* padding: 0 2em; */
 	min-height: 300px;
-	min-width: 320px;
+	/* min-width: 320px; */
 	position: relative;
 }
 
@@ -180,7 +171,8 @@ a:hover {
 		width: 100%;
 		min-width: auto;
 		min-height: auto;
-		padding: 3em 2em; 
+		/* padding: 3em 2em; */
+		background-color: #c62960;
 	}
 
 	.column p {
